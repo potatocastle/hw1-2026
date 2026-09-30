@@ -1,4 +1,4 @@
-/* src/bench.h — 시간 · 메모리 · 안정성 측정 (정렬은 자기가 측정당하는 줄 모른다) */
+/* src/bench.h — 시간 · 메모리 · 안정성 측정 */
 #ifndef BENCH_H
 #define BENCH_H
 

@@ -1,4 +1,4 @@
-/* src/quickSort.c */
+/* src/quickSort.c -퀵 정렬*/
 #include "sortctx.h"
 #include <stddef.h>
 

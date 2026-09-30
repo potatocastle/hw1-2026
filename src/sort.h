@@ -1,4 +1,4 @@
-/* src/sort.h — 정렬 공통 인터페이스 (바깥에 보이는 것은 이것뿐이다) */
+/* src/sort.h — 정렬 공통 인터페이스 */
 #ifndef SORT_H
 #define SORT_H
 
