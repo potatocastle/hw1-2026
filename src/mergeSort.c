@@ -1,9 +1,4 @@
-/* src/mergeSort.c — 병합 정렬 (하향식, 보조 배열 n칸)
- *
- * 교과서 그대로의 판이다. 반으로 나눠 각각 정렬한 뒤, 두 구간을 보조 배열에
- * 병합하고 다시 원래 자리로 복사한다. 이미 정렬된 입력이어도 일을 줄이지 않는다
- * — 이 점이 팀 정렬과 견줄 때 차이를 만든다.
- */
+/* src/mergeSort.c — 병합 정렬 */
 #include "sortctx.h"
 
 static void mergeRange(SortCtx *c, char *buf, size_t lo, size_t mid, size_t hi) {

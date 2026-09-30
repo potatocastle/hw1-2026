@@ -1,11 +1,4 @@
-/* src/main.c — 비교 결과 출력
- *
- *   ./src/main.out         사람이 읽는 표
- *   ./src/main.out --csv   같은 측정을 CSV로 (tools/plot.py가 읽는다)
- *
- * 무엇을 잴지는 아래 세 실험 함수에만 적혀 있고, 표로 찍을지 CSV로 찍을지는
- * RowSink 함수 포인터로 갈아 끼운다. 정렬을 갈아 끼운 것과 같은 수다.
- */
+/* src/main.c — 비교 결과 출력 */
 #include "bench.h"
 #include <stdio.h>
 #include <stdlib.h>

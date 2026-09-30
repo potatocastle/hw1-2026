@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+<rect width="720" height="380" fill="#ffffff"/>
+<text x="360.0" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">입력 모양별 이동 횟수 (n = 100,000) (로그 축)</text>
+<line x1="78" y1="322.0" x2="700" y2="322.0" stroke="#e5e5e5"/>
+<text x="72.0" y="326.0" font-size="10" text-anchor="end" fill="#444" >10k</text>
+<line x1="78" y1="236.7" x2="700" y2="236.7" stroke="#e5e5e5"/>
+<text x="72.0" y="240.7" font-size="10" text-anchor="end" fill="#444" >100k</text>
+<line x1="78" y1="151.3" x2="700" y2="151.3" stroke="#e5e5e5"/>
+<text x="72.0" y="155.3" font-size="10" text-anchor="end" fill="#444" >1M</text>
+<line x1="78" y1="66.0" x2="700" y2="66.0" stroke="#e5e5e5"/>
+<text x="72.0" y="70.0" font-size="10" text-anchor="end" fill="#444" >10M</text>
+<text x="16.0" y="185.0" font-size="11" text-anchor="middle" fill="#444" transform="rotate(-90 16 185.0)">이동 횟수</text>
+<line x1="78" y1="322" x2="700" y2="322" stroke="#888"/>
+<text x="140.2" y="340.0" font-size="11" text-anchor="middle" fill="#444" >무작위</text>
+<rect x="90.4" y="106.7" width="31.2" height="215.3" fill="#4C78A8"/>
+<rect x="123.6" y="141.4" width="31.2" height="180.6" fill="#F58518"/>
+<rect x="156.8" y="110.3" width="31.2" height="211.7" fill="#54A24B"/>
+<text x="264.6" y="340.0" font-size="11" text-anchor="middle" fill="#444" >정렬됨</text>
+<rect x="214.8" y="106.7" width="31.2" height="215.3" fill="#4C78A8"/>
+<rect x="248.0" y="278.0" width="31.2" height="44.0" fill="#F58518"/>
+<text x="389.0" y="340.0" font-size="11" text-anchor="middle" fill="#444" >역순</text>
+<rect x="339.2" y="106.7" width="31.2" height="215.3" fill="#4C78A8"/>
+<rect x="372.4" y="214.3" width="31.2" height="107.7" fill="#F58518"/>
+<rect x="405.6" y="221.6" width="31.2" height="100.4" fill="#54A24B"/>
+<text x="513.4" y="340.0" font-size="11" text-anchor="middle" fill="#444" >중복많음</text>
+<rect x="463.6" y="106.7" width="31.2" height="215.3" fill="#4C78A8"/>
+<rect x="496.8" y="125.8" width="31.2" height="196.2" fill="#F58518"/>
+<rect x="530.0" y="113.8" width="31.2" height="208.2" fill="#54A24B"/>
+<text x="637.8" y="340.0" font-size="11" text-anchor="middle" fill="#444" >거의정렬</text>
+<rect x="588.0" y="106.7" width="31.2" height="215.3" fill="#4C78A8"/>
+<rect x="621.2" y="258.2" width="31.2" height="63.8" fill="#F58518"/>
+<rect x="654.4" y="138.2" width="31.2" height="183.8" fill="#54A24B"/>
+<rect x="86" y="42" width="12" height="12" fill="#4C78A8"/>
+<text x="102.0" y="52.0" font-size="11" text-anchor="start" fill="#333" >mergeSort</text>
+<rect x="196" y="42" width="12" height="12" fill="#F58518"/>
+<text x="212.0" y="52.0" font-size="11" text-anchor="start" fill="#333" >quickSort</text>
+<rect x="306" y="42" width="12" height="12" fill="#54A24B"/>
+<text x="322.0" y="52.0" font-size="11" text-anchor="start" fill="#333" >timSort</text>
+</svg>

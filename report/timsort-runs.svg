@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" font-family="'Noto Sans CJK KR','Noto Sans KR','Malgun Gothic','Apple SD Gothic Neo',sans-serif">
+<rect width="760" height="330" fill="#fff"/>
+<defs><marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0,0 L10,4 L0,8 z" fill="#555"/></marker></defs>
+<text x="20" y="28" font-size="14" text-anchor="start" fill="#222" font-weight="bold">① 자연 런 찾기 — 왼쪽부터 이미 정렬된 구간을 찾는다</text>
+<rect x="30" y="44" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="45.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">1</text>
+<rect x="60" y="44" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="75.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">3</text>
+<rect x="90" y="44" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="105.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">5</text>
+<rect x="120" y="44" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="135.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">8</text>
+<rect x="150" y="44" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="165.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">9</text>
+<rect x="180" y="44" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="195.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">7</text>
+<rect x="210" y="44" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="225.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">6</text>
+<rect x="240" y="44" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="255.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">4</text>
+<rect x="270" y="44" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="285.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">2</text>
+<rect x="300" y="44" width="30" height="28" fill="#d6e4f5" stroke="#555"/>
+<text x="315.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">5</text>
+<rect x="330" y="44" width="30" height="28" fill="#d6e4f5" stroke="#555"/>
+<text x="345.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">3</text>
+<rect x="360" y="44" width="30" height="28" fill="#d6e4f5" stroke="#555"/>
+<text x="375.0" y="63.0" font-size="13" text-anchor="middle" fill="#222">8</text>
+<path d="M30,76 v6 H180 v-6" fill="none" stroke="#333"/>
+<text x="105.0" y="98" font-size="12" text-anchor="middle" fill="#333">오름차순 런 (그대로)</text>
+<path d="M180,76 v6 H300 v-6" fill="none" stroke="#b35900"/>
+<text x="240.0" y="98" font-size="12" text-anchor="middle" fill="#b35900">엄격한 내림차순 런 → 뒤집기</text>
+<path d="M300,76 v6 H390 v-6" fill="none" stroke="#2b5d99"/>
+<text x="345.0" y="98" font-size="12" text-anchor="middle" fill="#2b5d99">짧은 런</text>
+<text x="20" y="142" font-size="14" text-anchor="start" fill="#222" font-weight="bold">② 뒤집기 + minrun까지 늘리기 (이진 삽입 정렬)</text>
+<rect x="30" y="158" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="45.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">1</text>
+<rect x="60" y="158" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="75.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">3</text>
+<rect x="90" y="158" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="105.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">5</text>
+<rect x="120" y="158" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="135.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">8</text>
+<rect x="150" y="158" width="30" height="28" fill="#cfe8cf" stroke="#555"/>
+<text x="165.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">9</text>
+<rect x="180" y="158" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="195.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">2</text>
+<rect x="210" y="158" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="225.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">4</text>
+<rect x="240" y="158" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="255.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">6</text>
+<rect x="270" y="158" width="30" height="28" fill="#f9d9b5" stroke="#555"/>
+<text x="285.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">7</text>
+<rect x="300" y="158" width="30" height="28" fill="#d6e4f5" stroke="#555"/>
+<text x="315.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">3</text>
+<rect x="330" y="158" width="30" height="28" fill="#d6e4f5" stroke="#555"/>
+<text x="345.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">5</text>
+<rect x="360" y="158" width="30" height="28" fill="#d6e4f5" stroke="#555"/>
+<text x="375.0" y="177.0" font-size="13" text-anchor="middle" fill="#222">8</text>
+<text x="410" y="172" font-size="12" text-anchor="start" fill="#444">실제로는 minrun = 32~64. 짧은 런은 뒤따르는</text>
+<text x="410" y="190" font-size="12" text-anchor="start" fill="#444">원소를 이진 삽입 정렬로 끌어와 minrun 길이로 만든다.</text>
+<text x="20" y="238" font-size="14" text-anchor="start" fill="#222" font-weight="bold">③ 런 스택 — 불변식이 깨지면 이웃 런끼리 병합</text>
+<rect x="30" y="252" width="210" height="24" rx="4" fill="#cfe8cf" stroke="#555"/>
+<text x="135.0" y="269.0" font-size="12" text-anchor="middle" fill="#222">Z : 길이 120</text>
+<rect x="30" y="278" width="170" height="24" rx="4" fill="#f9d9b5" stroke="#555"/>
+<text x="115.0" y="295.0" font-size="12" text-anchor="middle" fill="#222">Y : 길이 70</text>
+<rect x="30" y="304" width="150" height="24" rx="4" fill="#d6e4f5" stroke="#555"/>
+<text x="105.0" y="321.0" font-size="12" text-anchor="middle" fill="#222">X : 길이 64 (새 런)</text>
+<text x="260" y="270" font-size="13" text-anchor="start" fill="#222" font-weight="bold">불변식  Z > Y + X   그리고   Y > X</text>
+<text x="260" y="294" font-size="12" text-anchor="start" fill="#444">120 > 70 + 64 ?  아니다 → Z가 X보다 길므로 Y와 X를 병합 (134)</text>
+<text x="260" y="316" font-size="12" text-anchor="start" fill="#2b5d99">런 길이가 피보나치처럼 자라므로 스택 높이 = O(log n)</text>
+</svg>
