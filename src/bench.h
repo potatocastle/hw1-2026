@@ -1,53 +1,42 @@
-/* 정렬 셋을 같은 잣대로 재는 도구.
- *
- * 알고리즘(sort.c)과 측정(bench.c)을 나눠 둔다. 정렬은 자기가 측정당하는
- * 줄 모르고, 측정은 어떤 정렬인지 모른다. 둘을 잇는 것은 SortAlgorithm뿐이다.
- */
+/* src/bench.h — 시간 · 메모리 · 안정성 측정 (정렬은 자기가 측정당하는 줄 모른다) */
 #ifndef BENCH_H
 #define BENCH_H
 
-#include <stddef.h>
-
 #include "sort.h"
 
-/* 측정에 쓰는 원소. key로 정렬하고 tag에는 입력 순서를 담아 둔다.
- * 정렬 뒤에도 같은 key끼리 tag가 오름차순이면 안정 정렬이다.
- * key만 있는 int 배열로는 안정성을 볼 수 없어서 원소를 이렇게 잡았다. */
+/* int 배열로는 안정성을 볼 수 없다. 입력 순서를 tag에 새겨 둔다. */
 typedef struct Record {
-    int key;
-    int tag;
+    int key;   /* 정렬 기준 */
+    int tag;   /* 입력에서의 순서 */
 } Record;
 
-/* key만 본다. tag는 비교에 넣지 않는다 (넣으면 모든 정렬이 안정해 보인다). */
-int recordCompare(const void *a, const void *b);
+typedef enum InputShape {
+    SHAPE_RANDOM,     /* 무작위 (거의 모두 다른 값) */
+    SHAPE_SORTED,     /* 이미 정렬됨 */
+    SHAPE_REVERSED,   /* 역순 (엄격한 내림차순) */
+    SHAPE_DUPS,       /* 값 10종만 — 중복 많음 */
+    SHAPE_NEARLY,     /* 정렬 후 n/100 쌍을 무작위로 교환 — 거의 정렬 */
+    SHAPE_RUNS,       /* 오름차순 런 param개를 이어 붙임 */
+    SHAPE_COUNT
+} InputShape;
 
-/* 입력 모양. 정렬은 입력에 따라 성능이 크게 달라진다. */
-typedef enum InputKind {
-    INPUT_RANDOM,     /* 무작위 */
-    INPUT_SORTED,     /* 이미 정렬됨 */
-    INPUT_REVERSED,   /* 역순 */
-    INPUT_FEW_UNIQUE, /* 중복 많음 */
-    INPUT_KIND_COUNT
-} InputKind;
+const char *shapeName(InputShape shape);   /* 사람이 읽는 이름 */
+const char *shapeId(InputShape shape);     /* CSV용 영문 이름 */
 
-const char *inputKindName(InputKind kind);
+/* 씨앗이 같으면 어느 기계에서나 같은 입력 (자체 난수 splitmix64 사용) */
+void makeInput(Record *out, size_t n, InputShape shape, size_t param, unsigned long long seed);
 
-/* a[0..n-1]을 kind 모양으로 채운다. seed를 고정하면 매번 같은 입력이 나온다. */
-void makeInput(Record *a, size_t n, InputKind kind, unsigned seed);
-
-int recordsSorted(const Record *a, size_t n); /* key가 오름차순인가 */
-int recordsStable(const Record *a, size_t n); /* 같은 key의 tag 순서가 남았는가 */
+int recordCompare(const void *a, const void *b);   /* key만 본다 */
+int isSortedByKey(const Record *a, size_t n);
+int isStableByTag(const Record *a, size_t n);      /* 같은 key끼리 tag 오름차순? */
 
 typedef struct BenchResult {
-    const SortAlgorithm *algo;
-    size_t n;
-    double millis;   /* 한 번 도는 데 걸린 시간 */
-    SortStats stats; /* 마지막 회차의 측정값 */
-    int sorted;      /* 결과가 정렬됐는가 — 측정 전에 이것부터 본다 */
-    int stable;      /* 실제로 안정했는가 (구현 표의 주장이 아니라 실측) */
+    double ms;          /* reps회 평균 (입력 복사는 빼고 잰다) */
+    SortStats stats;    /* 마지막 한 번의 카운터 (입력이 같으니 매번 같다) */
+    int sorted;
+    int stable;
 } BenchResult;
 
-/* input을 복사해 reps번 정렬하고 평균 시간을 남긴다. 복사 시간은 빼고 잰다. */
 BenchResult benchRun(const SortAlgorithm *algo, const Record *input, size_t n, int reps);
 
-#endif /* BENCH_H */
+#endif
